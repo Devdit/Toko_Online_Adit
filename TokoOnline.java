@@ -157,26 +157,26 @@ class Main extends TokoOnline {
                         Member.Telepon.add(telpIn);
                         transaksi.transaksiJalan();
                     }
-                // if (status.get(z) == "1") {
-                //     TokoOnline.nama.add(Nama);
-                //     karyawan.Alamat.add(Alamat);
-                //     karyawan.Telepon.add(telp);
-                //     delayed("masukkan kode khusus karyawan", 30);
-                //     String kode = Scan.next();
-                //     if (kode.equalsIgnoreCase("2234")) {
-                //         barang.tambahBarang();
-                //     } else {
-                //         delayed("Kode yang dimasukkan salah", 30);
-                //     }
+                if (status.get(z) == "1") {
+                    TokoOnline.nama.add(Nama);
+                    karyawan.Alamat.add(Alamat);
+                    karyawan.Telepon.add(telp);
+                    delayed("masukkan kode khusus karyawan", 30);
+                    String kode = Scan.next();
+                    if (kode.equalsIgnoreCase("2234")) {
+                        barang.tambahBarang();
+                    } else {
+                        delayed("Kode yang dimasukkan salah", 30);
+                    }
 
-                // } else if (status.get(z) == "2") {
-                //     Member.nama.add(Nama);
-                //     delayed("Masukkan saldo anda(dalam rupiah)", 30);
-                //     int saldo = Scan.nextInt();
-                //     Member.saldo.add(saldo);
-                //     Member.Alamat.add(Alamat);
-                //     Member.Telepon.add(telp);
-                //     transaksi.transaksiJalan();
+                } else if (status.get(z) == "2") {
+                    Member.nama.add(Nama);
+                    delayed("Masukkan saldo anda(dalam rupiah)", 30);
+                    int saldo = Scan.nextInt();
+                    Member.saldo.add(saldo);
+                    Member.Alamat.add(Alamat);
+                    Member.Telepon.add(telp);
+                    transaksi.transaksiJalan();
             
                     else if (pilihanAwal.equalsIgnoreCase("2")) {
                     delayed("masukkan nama:", 30);
@@ -186,11 +186,11 @@ class Main extends TokoOnline {
                     for (x = 0; x <999; x++) {
                         if (inputNama.equals("nama.get(x)") && inputPassword.equals("password.get(x)")) {
                             statusAkhir = status.get(x);
-                            // kondisiStats = "1";
+                            kondisiStats = "1";
                         }
-                        // if (kondisiStats.equalsIgnoreCase("0")) {
-                        //     delayed("Nama Tidak terdaftar!", i);
-                        // }
+                        if (kondisiStats.equalsIgnoreCase("0")) {
+                            delayed("Nama Tidak terdaftar!", i);
+                        }
                     }
                     
                     }
